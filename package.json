@@ -1,0 +1,58 @@
+{
+    "name": "ttl_hotdesking_system",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "node server.js",
+        "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
+        "client": "cd client && yarn start",
+        "server": "nodemon server.js",
+        "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    },
+    "dependencies": {
+        "@devexpress/dx-react-core": "^2.7.6",
+        "@devexpress/dx-react-scheduler": "^2.7.6",
+        "@devexpress/dx-react-scheduler-material-ui": "^2.7.6",
+        "@material-ui/core": "^4.12.3",
+        "@material-ui/icons": "^4.11.2",
+        "body-parser": "^1.18.3",
+        "chart.js": "^2.9.4",
+        "create-react-app": "^1.2.1",
+        "dotenv": "^8.2.0",
+        "emailjs-com": "^2.6.4",
+        "express": "^4.17.1",
+        "js-cookie": "^2.2.1",
+        "js-sha256": "^0.9.0",
+        "mysql2": "^2.2.5",
+        "nodemailer": "^6.6.3",
+        "react": "^17.0.2",
+        "react-bootstrap-validation": "^0.1.11",
+        "react-calendar": "^3.3.1",
+        "react-chartjs-2": "^2.11.1",
+        "react-cookie": "^4.0.3",
+        "react-cookies": "^0.1.1",
+        "react-dom": "^17.0.2",
+        "react-icons": "^4.2.0",
+        "react-router-dom": "^5.2.0",
+        "react-scripts": "^1.1.5",
+        "react-select": "^4.3.0",
+        "reactjs": "^1.0.0",
+        "sequelize": "^6.6.4",
+        "ttl_hotdesking_system": "file:client",
+        "web-vitals": "^1.1.0",
+        "yarn": "^1.22.10"
+    },
+    "devDependencies": {
+        "concurrently": "^6.0.2",
+        "eslint": "^7.32.0",
+        "eslint-config-standard": "^16.0.3",
+        "eslint-plugin-import": "^2.24.0",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^5.1.0",
+        "eslint-plugin-react": "^7.24.0",
+        "nodemon": "^2.0.7"
+    },
+    "engines": {
+        "node": ">=14.x",
+        "npm": ">=7.x"
+    }
+}
